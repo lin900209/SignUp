@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_app/components/social_media.dart';
+import 'package:flutter_app/scareens/sign_up/components/sign_up_form.dart';
+import 'package:flutter_app/size_cinfig.dart';
+import 'package:flutter_app/scareens/login/login_screen.dart';
+class Body extends StatelessWidget {
+  get contentStyle => null;
+
+  get headingStyle => null;
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Padding(
+        padding:
+        EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(25)),
+        child: Column(
+          children: [
+            Text(
+              "Register Account",
+              style: headingStyle,
+            ),
+            VerticalSpacing(of: 16),
+            Text(
+              "Sign up with your email or continue with social media",
+              style: contentStyle,
+            ),
+            VerticalSpacing(of: 25),
+            SignUpForm(),
+            VerticalSpacing(of: 25),
+            SocialMedia(),
+            VerticalSpacing(of: 25),
+          ],
+        ),
+      ),
+    );
+  }
+}
